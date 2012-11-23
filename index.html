@@ -15,6 +15,12 @@ window.addEventListener(orientationEvent, function() {
     $('.rotation_bg').fadeIn(300).delay(400).fadeOut(300);
     $('.rotation_cont').fadeIn(300).delay(400).fadeOut(300);
 }, false);
+
+document.addEventListener("menubutton", onMenuKeyDown, false);
+
+function onMenuKeyDown() {
+    alert('We currently lack a menu option. Sorry.');
+}
 </script>
 <div class="top">
 	<!--<img src="img/4_collections_view_as_grid.png" class="main"/>-->
