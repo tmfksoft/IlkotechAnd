@@ -38,6 +38,10 @@ body {
    background-image: -ms-linear-gradient(top, silver, grey);
    /* Opera 11.10+ */
    background-image: -o-linear-gradient(top, silver, grey);
+   
+   position:fixed;
+   top:0;
+   left:0;
 }
 .footer {
 	color:white;
@@ -45,6 +49,9 @@ body {
 	text-align:center;
 	font-size:15px;
 	padding-top:5px;
+	position:fixed;
+	bottom:0;
+	left:0;
 }
 .section {
 	height:32px;
