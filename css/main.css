@@ -42,6 +42,7 @@ body {
    position:fixed;
    top:0;
    left:0;
+   width:100%;
 }
 .footer {
 	color:white;
@@ -52,6 +53,8 @@ body {
 	position:fixed;
 	bottom:0;
 	left:0;
+	width:100%;
+	background:black;
 }
 .section {
 	height:32px;
@@ -173,6 +176,7 @@ ul.links {
 	padding-top:5px;
 	padding-bottom:5px;
 	font-size:15px;
+	margin-top:50px;
 }
 a {
 	color:black;
