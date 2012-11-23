@@ -5,8 +5,10 @@
 <meta name="viewport" content = "width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 5" />
 <link rel="apple-touch-icon-precomposed" href="icons/icon.png"/>
 <link rel="stylesheet" href="css/buttons.css" type="text/css" />
+<link rel="stylesheet" href="css/feed.css" type="text/css" />
 <link rel="stylesheet" href="css/main.css" type="text/css" />
 <script src="js/jquery-1.8.2.min.js"></script>
+<script src="js/jquery.zrssfeed.min.js"></script>
 <script>
 var supportsOrientationChange = "onorientationchange" in window,
 	orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
@@ -15,20 +17,24 @@ window.addEventListener(orientationEvent, function() {
     $('.rotation_bg').fadeIn(300).delay(400).fadeOut(300);
     $('.rotation_cont').fadeIn(300).delay(400).fadeOut(300);
 }, false);
+$(document).ready(function () {
+	loadRss();
+});
+function loadRss() {
+	$('.feed').rssfeed('http://community.ilkotech.co.uk/blog/?feed=rss',{titletag: 'b', header: false});
+}
 </script>
 <div class="top">
-	<!--<img src="icons/4_collections_view_as_grid.png" class="main"/>-->
-	<div style="padding-top:3px;display:inline-block;">Ilkotech Mobile</div>
-	<!--<img src="icons/1_navigation_refresh.png" class="refresh" onClick="document.location.reload(true)">-->
+	<img src="icons/4_collections_view_as_grid.png" class="main" onClick="document.location.href = 'index.php';"/>
+	<div style="padding-top:3px;display:inline-block;">RSS Feed</div>
+	<img src="icons/1_navigation_refresh.png" class="refresh" onClick="loadRss();">
 </div>
-<ul class="links">
-	<li><img src="icons/7_location_web_site.png"/><a href="http://ilkotech.co.uk/">Home</a></li>
-	<li><img src="icons/6_social_group.png"/><a href="http://ilkotech.co.uk/forum/">Forum</a></li>
-	<li><img src="icons/4_collections_view_as_list.png"/><a href="http://ilkotech.co.uk/irc/">IRC Site</a></li>
-	<li><img src="icons/10_device_access_network_wifi.png"/><a href="feed.html">RSS Feed</a></li>
-	<li><img src="icons/10_device_access_storage.png"/><a href="staff.html">Staff</a></li>
-	<li><img src="icons/2_action_help.png"/><a href="about.php">About</a></li>
-</ul>
+<div>
+	<div class="feed"><noscript><font color="white">You need to enable Javascript to display this feed!</font></noscript></div>
+	<center style="background:white;">
+		<img src="icons/1_navigation_refresh.png" style="cursor:hand;" onClick="loadRss();">
+	</center>
+</div>
 <div class="footer">
 	Created by Thomas Edwards &copy; Ilkotech 2012
 </div>

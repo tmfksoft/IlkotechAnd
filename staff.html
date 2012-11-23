@@ -1,0 +1,79 @@
+
+<title>Ilkotech Mobile - Web App</title>
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content = "width = device-width, initial-scale = 1, user-scalable = no" />
+<meta name="viewport" content = "width = device-width, initial-scale = 1, minimum-scale = 1, maximum-scale = 5" />
+<link rel="apple-touch-icon-precomposed" href="icons/icon.png"/>
+<link rel="stylesheet" href="css/buttons.css" type="text/css" />
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<script src="js/jquery-1.8.2.min.js"></script>
+<script>
+var supportsOrientationChange = "onorientationchange" in window,
+	orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+	
+window.addEventListener(orientationEvent, function() {
+    $('.rotation_bg').fadeIn(300).delay(400).fadeOut(300);
+    $('.rotation_cont').fadeIn(300).delay(400).fadeOut(300);
+}, false);
+</script>
+<div class="top">
+	<img src="icons/4_collections_view_as_grid.png" class="main" onClick="document.location.href = 'index.php';"/>
+	<div style="padding-top:3px;display:inline-block;">Staff</div>
+	<!--<img src="icons/1_navigation_refresh.png" class="refresh" onClick="$('.content').rssfeed('http://ilkotech.co.uk/feed');">-->
+</div>
+<div style="padding-left:64px;" class="content">				
+	<h1>General Staff</h1>
+	<p><strong>Thomas Edwards</strong><br>
+	Role: Ilkotech & TMFK founder. (2007-Present)</p>
+
+	<p><strong><em><a href="https://mvp.support.microsoft.com/profile/Sean.Roe">Sean Roe</a></em></strong><br>
+	Role: Ilkotech Director</p>
+	
+	<p><strong>Sierra Brown</strong><br>
+	Role: Ilkotech Director</p>
+	
+	<h1>IRC Staff</h1>
+	<p><strong>Fudgie</strong><br>
+	<em>Thomas Edwards</em><br>
+	Role: Admin - Network Founder</p>
+
+	<p><strong>HeavyMetal</strong><br>
+	Role: Admin - Network Administrator</p>
+
+	<p><strong>therock247uk</strong><br>
+	<em><a href="https://mvp.support.microsoft.com/profile/Sean.Roe">Sean Roe</a></em><br>
+	Role: Admin - Network Administrator</p>
+	
+	<p><strong>DG</strong><br>
+	<em>Tony Lloyd</em><br>
+	Role: Admin - Network Administrator</p>
+
+	<p><strong>The_Middleman</strong><br>
+	Role: Admin - Network Administrator</p>
+
+	<p><strong>Sierra</strong><br>
+	<em>Sierra Brown</em><br>
+	Role: Admin - Network Administrator - Forum Technician</p>
+	
+	<p><strong>Gtoxic</strong><br>
+	Role: Admin - Network Administrator - mars.ilkotech.co.uk host</p>
+
+	<p><strong>Dead-i</strong><br>
+	Role: Oper - General IRC Staff</p>
+	
+	<p><strong>Luke</strong><br>
+	<em>Luke Thompson</em><br>
+	<s>Role: Oper - General IRC Staff</s> - <strong>Resigned</strong></p>
+	
+	<p><strong>Linkin</strong><br>
+	Role: Oper - General IRC Staff</p>
+</div>
+<div class="footer">
+	Created by Thomas Edwards &copy; Ilkotech 2012
+</div>
+<div class="rotation_bg"></div>
+<div class="rotation_cont">
+	<div class="rotation_img">
+		<img src="icons/10_device_access_screen_rotation.png"/>
+	</div>
+</div>

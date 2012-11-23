@@ -1,1 +1,1 @@
-<plugin name="Notification" value="org.apache.cordova.Notification"/>
+<plugin name="Compass" value="org.apache.cordova.CompassListener" />
